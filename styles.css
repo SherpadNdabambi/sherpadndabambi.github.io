@@ -1,0 +1,103 @@
+:root {
+	--dark-blue: #18323d;
+	--light-blue: #c2e8f6;
+	--dark-grey: #353535;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--light-blue);
+	font-family: sans-serif;
+	font-size: 1.6rem;
+}
+
+.bottom {
+	position: absolute;
+	bottom: 0;
+}
+
+.center {
+	left: 50%;
+	position: absolute;
+	transform: translateX(-50%);
+}
+
+.center.middle {
+	transform: translate(-50%, -50%);
+}
+
+.container {
+	position: relative;
+}
+
+#copyright {
+	text-align: center;
+}
+
+footer {
+	margin-top: 5rem;
+}
+
+.hidden {
+	display: none;
+}
+
+html {
+	/* Setting a base font size of 10px give us easier rem calculations
+	   Info: 1rem === 10px, 1.5rem === 15px, 2rem === 20px and so forth */
+	font-size: 10px;
+}
+
+main {
+	height: auto;
+	min-height: calc(100vh - 100px);
+}
+
+.middle {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+nav {
+	display: flex;
+	justify-content: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: var(--dark-blue);	
+	box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+	z-index: 1;
+}
+
+nav ul {
+	display: flex;
+	list-style: none;
+	margin: 0 1rem;
+}
+
+nav a {
+	color: var(--light-blue);
+	display: block;
+	font-size: 1.3em;
+	padding: 2rem;
+	text-decoration: none;
+}
+
+nav a:hover {
+	background: var(--dark-grey);
+}
+
+.right {
+	position: absolute;
+	right: 0;
+}
+
+.top {
+	position: absolute;
+	top: 0;
+}
