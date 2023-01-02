@@ -160,11 +160,15 @@ main {
 
 #projects-grid > a {
 	margin: 24px;
+	max-width: 304px;
 }
 
 #projects-grid > a:last-child {
+	align-items: center;
+	display: flex;
 	font-weight: 600;
-	width: auto;
+	justify-content: center;
+	min-width: 304px;
 }
 
 #projects-grid > a:not(:last-child) {
@@ -260,7 +264,6 @@ main {
 #welcome-section {
 	align-items: center;
 	background-color: var(--dark-blue);
-	/* background-image: linear-gradient(60deg, var(--dark-red) 0%, var(--dark-blue) 100%); */
 	background-image: linear-gradient(60deg, rgb(30,40,50) 0%, var(--dark-blue) 100%);
 	display: flex;
 	flex-direction: column;
@@ -273,3 +276,30 @@ main {
 #welcome-section a:hover {
 	opacity: 0.5;
 }
+
+/* Start media queries */
+
+/* Start medium-sized screen queries */
+@media (min-width: 719px) {
+
+	#projects-grid > a {
+		height: 408px;
+		width: 304px;
+	}
+}
+/* End medium-sized screen queries */
+
+/* Start large-sized screen queries */
+@media (min-width: 1080px) {
+
+	#navbar li {
+		width: auto;
+	}
+
+	#navbar ul {
+		justify-content: flex-end;
+	}
+}
+/* End large-sized screen queries */
+
+/* End media queries */
