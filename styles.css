@@ -32,21 +32,6 @@ body {
 	margin: auto;
 }
 
-.bottom {
-	position: absolute;
-	bottom: 0;
-}
-
-.center {
-	left: 50%;
-	position: absolute;
-	transform: translateX(-50%);
-}
-
-.center.middle {
-	transform: translate(-50%, -50%);
-}
-
 .container {
 	position: relative;
 }
@@ -56,8 +41,11 @@ body {
 }
 
 footer {
+	align-items: center;
 	background-color: var(--dark-grey);
+	display: flex;
 	height: 100px;
+	justify-content: center;
 }
 
 h2 {
@@ -98,12 +86,6 @@ main {
 	height: auto;
 	margin-top: 64px;
 	min-height: calc(100vh - 100px);
-}
-
-.middle {
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
 }
 
 #navbar {
@@ -218,11 +200,6 @@ main {
 	margin-right: 8px;
 }
 
-.right {
-	position: absolute;
-	right: 0;
-}
-
 #self-portrait {
 	border: 3px var(--dark-grey-complement) solid;
 	border-radius: 50%;
@@ -254,11 +231,6 @@ main {
 
 #social-icon-grid figure > figcaption {
 	margin-left: 8px;
-}
-
-.top {
-	position: absolute;
-	top: 0;
 }
 
 #welcome-section {
