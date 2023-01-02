@@ -1,17 +1,35 @@
 :root {
-	--dark-blue: #18323d;
-	--light-blue: #c2e8f6;
-	--dark-grey: #353535;
+	--dark-blue: rgb(0,10,20);
+	--dark-blue-complement: rgb(218, 204, 159);
+	--dark-green: rgb(20,50,60);
+	--dark-green-complement: rgb(230,200,190);
+	--dark-grey: rgb(30, 30, 30);
+	--dark-grey-complement: rgb(220, 220, 220);
+	--dark-red: rgb(100,40,50);
+	--dark-red-complement: rgb(159,218,204);
+	--github-dark: rgb(13,17,23);
+	--grey: rgb(50,50,50);
+	--light-red: rgb(125,65,75);
 }
 
 * {
 	box-sizing: border-box;
 }
 
+a {
+	color: var(--dark-grey-complement);
+	text-decoration: none;
+}
+
+#welcome-section a:visited {
+	color: rgb(170, 170, 170);
+}
+
 body {
-	background-color: var(--light-blue);
+	color: var(--dark-grey-complement);
 	font-family: sans-serif;
 	font-size: 1.6rem;
+	margin: auto;
 }
 
 .bottom {
@@ -38,7 +56,15 @@ body {
 }
 
 footer {
-	margin-top: 5rem;
+	background-color: var(--dark-grey);
+	height: 100px;
+}
+
+h2 {
+	margin-top: 0;
+	padding-top:2rem;
+	text-align: center;
+	text-decoration: underline;
 }
 
 .hidden {
@@ -51,8 +77,23 @@ html {
 	font-size: 10px;
 }
 
+#links {
+	background-color: var(--dark-green);
+	background-image: linear-gradient(60deg, rgb(120,140,150) 0%, rgb(90,110,120) 25%, rgb(60,80,90) 75%, var(--dark-green) 100%);
+	height: calc(100vh - 64px - 100px);
+}
+
+#links a {
+	font-weight: 600;
+}
+
+#links a:hover {
+	opacity: 0.6;
+}
+
 main {
 	height: auto;
+	margin-top: 64px;
 	min-height: calc(100vh - 100px);
 }
 
@@ -62,34 +103,101 @@ main {
 	transform: translateY(-50%);
 }
 
-nav {
+#navbar {
 	display: flex;
 	justify-content: center;
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
-	background: var(--dark-blue);	
+	background: var(--dark-red);
 	box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
 	z-index: 1;
 }
 
-nav ul {
-	display: flex;
-	list-style: none;
-	margin: 0 1rem;
-}
-
-nav a {
-	color: var(--light-blue);
+#navbar a {
 	display: block;
 	font-size: 1.3em;
 	padding: 2rem;
-	text-decoration: none;
 }
 
-nav a:hover {
-	background: var(--dark-grey);
+#navbar a:hover {
+	background: var(--light-red);
+}
+
+#navbar li {
+	text-align: center;
+	width: 33%;
+}
+
+#navbar > ul {
+	display: flex;
+	list-style: none;
+	margin: 0 1rem;
+	padding: 0;
+	width: 100%;
+}
+
+#projects {
+	background-color: var(--dark-grey);
+	background-image: linear-gradient(90deg, var(--dark-grey) 0%, var(--grey) 30%, var(--grey) 70%, var(--dark-grey) 100%);
+	padding-top: 64px;
+}
+
+.project-description {
+	margin-left: 8px;
+	margin-right: 8px;
+}
+
+#projects-grid {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+#projects-grid > a {
+	background-color: var(--github-dark);
+	border: 1px var(--dark-grey-complement) solid;
+	border-radius: 5px;
+	margin: 24px;
+}
+
+#projects a:hover {
+	opacity: 0.7;
+}
+
+.project-tag {
+	background-color: var(--grey);
+	border-radius: 4px;
+	margin: 2px;
+	padding: 3px;
+}
+
+.project-tag-container {
+	align-content: space-between;
+	display: flex;
+	flex-wrap: wrap;
+	min-height: 50px;
+	margin-left: 8px;
+	margin-right: 8px;
+}
+
+.project-tile img {
+	border-radius: inherit;
+	width: 100%;
+}
+
+.project-tile figure {
+	border-bottom: 1px var(--dark-grey-complement) solid;
+	border-radius: inherit inherit 0 0;
+	margin: 0;
+	width: 100%;
+}
+
+.project-title {
+	margin-left: 8px;
+	margin-right: 8px;
 }
 
 .right {
@@ -97,7 +205,57 @@ nav a:hover {
 	right: 0;
 }
 
+#self-portrait {
+	border: 3px var(--grey) solid;
+	border-radius: 50%;
+	height: 144px;
+}
+
+.social-icon {
+	height: 32px;
+}
+
+#social-icon-grid {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+#social-icon-grid-container {
+	align-items: center;
+	display: flex;
+	height: calc(100vh - 64px - 48px - 120px);
+	justify-content: center;
+}
+
+#social-icon-grid figure {
+	align-items: center;
+	display: flex;
+	width: 92px;
+}
+
+#social-icon-grid figure > figcaption {
+	margin-left: 8px;
+}
+
 .top {
 	position: absolute;
 	top: 0;
+}
+
+#welcome-section {
+	align-items: center;
+	background-color: var(--dark-blue);
+	/* background-image: linear-gradient(60deg, var(--dark-red) 0%, var(--dark-blue) 100%); */
+	background-image: linear-gradient(60deg, rgb(30,40,50) 0%, var(--dark-blue) 100%);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 64px;
+	text-align: center;
+	height: calc(100vh - 64px);
+}
+
+#welcome-section a:hover {
+	opacity: 0.5;
 }
