@@ -12,4 +12,4 @@
 
 ## To do
 
-- [ ] replace png social media icons with svg
+- [x] replace png social media icons with svg
