@@ -21,10 +21,6 @@ a {
 	text-decoration: none;
 }
 
-#welcome-section a:visited {
-	color: rgb(170, 170, 170);
-}
-
 body {
 	color: var(--dark-grey-complement);
 	font-family: sans-serif;
@@ -96,7 +92,7 @@ main {
 	left: 0;
 	width: 100%;
 	background: var(--dark-red);
-	box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+	box-shadow: 0 3px 6px 0 rgba(0,0,0,.1),0 1px 3px 0 rgba(0,0,0,.08);
 	z-index: 1;
 }
 
@@ -247,6 +243,10 @@ main {
 
 #welcome-section a:hover {
 	opacity: 0.5;
+}
+
+#welcome-section a:visited {
+	color: rgb(170, 170, 170);
 }
 
 /* Start media queries */
