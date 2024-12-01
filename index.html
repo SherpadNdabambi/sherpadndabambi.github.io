@@ -1,421 +1,397 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
+    <!--page title-->
+    <title>Sherpad Ndabambi's Personal Portfolio</title>
 
-	<!--page title-->
-	<title>Sherpad Ndabambi's Personal Portfolio</title>
+    <!--page description-->
+    <meta name="description" content="My personal portfolio website." />
 
-	<!--page description-->
-	<meta name="description" content="My personal portfolio website.">
+    <!--character encoding-->
+    <meta charset="utf-8" />
 
-	<!--character encoding-->
-	<meta charset="utf-8">
+    <!--device width-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-	<!--device width-->
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Open Graph tags-->
+    <meta property="og:title" content="Sherpad Ndabambi's Personal Portfolio" />
+    <meta property="og:description" content="My personal portfolio website." />
+    <meta property="og:image" content="img/og-image.jpg" />
 
-	<!--Open Graph tags-->
-	<meta property="og:title" content="Sherpad Ndabambi's Personal Portfolio">
-	<meta property="og:description" content="My personal portfolio website.">
-	<meta property="og:image" content="img/og-image.jpg">
+    <!--Twitter cards-->
+    <meta
+      name="twitter:title"
+      content="Sherpad Ndabambi's Personal Portfolio"
+    />
 
-	<!--Twitter cards-->
-	<meta name="twitter:title" content="Sherpad Ndabambi's Personal Portfolio">
+    <!-- icon -->
+    <link rel="icon" href="./img/logo.svg" />
 
-   <!-- icon -->
-   <link rel="icon" href="./img/logo.svg">
+    <!--stylesheets-->
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+  </head>
 
-	<!--stylesheets-->
-	<link rel="stylesheet" type="text/css" href="./styles.css">
-
-</head>
-
-<body>
-
-   <!-- START PAGE -->
-	<main class="container">
-
+  <body>
+    <!-- START PAGE -->
+    <main class="container">
       <!-- START NAVBAR -->
       <nav id="navbar">
+        <ul>
+          <li>
+            <a href="#">About</a>
+          </li>
 
-         <ul>
+          <li>
+            <a href="#projects">Projects</a>
+          </li>
 
-            <li>
-               <a href="#">About</a>
-            </li>
-
-            <li>
-               <a href="#projects">Projects</a>
-            </li>
-
-            <li>
-               <a href="#links">Contact</a>
-            </li>
-
-         </ul>
-
+          <li>
+            <a href="#links">Contact</a>
+          </li>
+        </ul>
       </nav>
       <!-- END NAVBAR -->
 
       <!-- START ABOUT SECTION -->
       <section id="welcome-section">
+        <figure>
+          <img
+            alt="Self portrait"
+            id="self-portrait"
+            src="./img/1649156270385.jpeg"
+          />
+        </figure>
 
-         <figure>
+        <h1>
+          Hello 👋<br />
+          I'm Sherpad
+        </h1>
 
-            <img alt="Self portrait" id="self-portrait" src="./img/1649156270385.jpeg">
-
-         </figure>
-
-         <h1>
-            Hello 👋<br/>
-            I'm Sherpad
-         </h1>
-
-         <p>
-            🎓 I'm a BSc in Computing student at the <a href="https://unisa.ac.za/" target="_blank">University of South Africa</a>.
-         </p>
-         <p>
-            💻 I'm currently learning web development through <a href="https://freecodecamp.org/" target="_blank">freeCodeCamp</a>.
-         </p>
-
+        <p>
+          I'm a passionate self-taught developer with a lifelong fascination for
+          computers. From writing my first code at 12 to creating websites,
+          designing graphics, and building servers, I thrive on learning and
+          growing my skills. I'm currently diving into forex trading and
+          crafting innovative trading bots by blending finance with my coding
+          expertise. I'm always eager to explore new technologies and conquer
+          fresh challenges.
+        </p>
       </section>
       <!-- END ABOUT SECTION -->
 
       <!-- START PROJECTS SECTION -->
       <section id="projects">
-
-         <h2>Projects</h2>
-
-         <div id="projects-grid">
-
-            <!-- START TIMER PROJECT TILE -->
-            <a href="https://timer.infinityfreeapp.com/" target="_blank">
-
-                  <span class="project-tile">
-
-                  <figure class="project-thumbnail">
-
-                     <img alt="Timer thumbnail" src="https://sherpadndabambi.github.io/timer/img/og-image.jpg">
-
-                  </figure>
-
-                  <span class="project-details">
-
-                     <h3 class="project-title">Timer</h3>
-
-                     <p class="project-description">Timer allows you to track your work time using a pomodoro timer, stopwatch, or countdown timer.</p>
-
-                     <p class="project-tag-container">
-
-                        <span class="project-tag">HTML</span>
-                        <span class="project-tag">CSS</span>
-                        <span class="project-tag">JavaScript</span>
-                        <span class="project-tag">jQuery</span>
-                        <span class="project-tag">PHP</span>
-                        <span class="project-tag">SQL</span>
-
-                     </p>
-
-                  </span>
-
-               </span>
-               <!-- END TIMER PROJECT TILE -->
-
-            </a>
-
-            <!-- START CUSTOMER SUPPORT SYSTEM DASHBOARD PROJECT TILE -->
-            <a href="https://crm-dashboard.infinityfreeapp.com/" target="_blank">
-
-               <span class="project-tile">
-
-                  <figure class="project-thumbnail">
-
-                     <img alt="Customer Support System Dashboard thumbnail" src="https://sherpadndabambi.github.io/customer-support-system-dashboard/img/og-image.jpg">
-
-                  </figure>
-
-                  <span class="project-details">
-
-                     <h3 class="project-title">Customer Support System Dashboard</h3>
-
-                     <p class="project-description">A project using SQL, PHP, HTML, and JavaScript to generate reports from mock customer support data.</p>
-
-                     <p class="project-tag-container">
-
-                        <span class="project-tag">HTML</span>
-                        <span class="project-tag">CSS</span>
-                        <span class="project-tag">JavaScript</span>
-                        <span class="project-tag">jQuery</span>
-                        <span class="project-tag">PHP</span>
-                        <span class="project-tag">SQL</span>
-
-                     </p>
-
-                  </span>
-
-               </span>
-               <!-- END CUSTOMER SUPPORT SYSTEM DASHBOARD PROJECT TILE -->
-
-            </a>
-
-            <!-- START COLOR MIXER PROJECT TILE -->
-            <a href="https://sherpadndabambi.github.io/colour-mixer/" target="_blank">
-
-                  <span class="project-tile">
-
-                  <figure class="project-thumbnail">
-
-                     <img alt="Color Mixer thumbnail" src="https://sherpadndabambi.github.io/colour-mixer/img/og-image.jpg">
-
-                  </figure>
-
-                  <span class="project-details">
-
-                     <h3 class="project-title">Color Mixer</h3>
-
-                     <p class="project-description">Mix primary colours and get their hex codes.</p>
-
-                     <p class="project-tag-container">
-
-                        <span class="project-tag">HTML</span>
-                        <span class="project-tag">CSS</span>
-                        <span class="project-tag">JavaScript</span>
-
-                     </p>
-
-                  </span>
-
-               </span>
-               <!-- END COLOR MIXER PROJECT TILE -->
-
-            </a>
-
-            <!-- START EDUCATIONAL GAMING SITE PROJECT TILE -->
-            <a href="https://sherpadndabambi.github.io/educational-gaming-site/" target="_blank">
-
-                  <span class="project-tile">
-
-                  <figure class="project-thumbnail">
-
-                     <img alt="Educational Gaming Site thumbnail" src="https://sherpadndabambi.github.io/educational-gaming-site/img/og-image.jpg">
-
-                  </figure>
-
-                  <span class="project-details">
-
-                     <h3 class="project-title">Educational Gaming Site</h3>
-
-                     <p class="project-description">Test your knowledge of Mother Nature with a fun quiz.</p>
-
-                     <p class="project-tag-container">
-
-                        <span class="project-tag">HTML</span>
-                        <span class="project-tag">CSS</span>
-                        <span class="project-tag">JavaScript</span>
-
-                     </p>
-
-                  </span>
-
-               </span>
-               <!-- END EDUCATIONAL GAMING SITE PROJECT TILE -->
-
-            </a>
-
-            <!-- START ROCK PAPER SCISSORS PROJECT TILE -->
-            <a href="https://sherpadndabambi.github.io/rock-paper-scissors/" target="_blank">
-
-                  <span class="project-tile">
-
-                  <figure class="project-thumbnail">
-
-                     <img alt="Rock Paper Scissors thumbnail" src="https://sherpadndabambi.github.io/rock-paper-scissors/img/og-image.jpg">
-
-                  </figure>
-
-                  <span class="project-details">
-
-                     <h3 class="project-title">Rock Paper Scissors</h3>
-
-                     <p class="project-description">Play Rock Paper Scissors.</p>
-
-                     <p class="project-tag-container">
-
-                        <span class="project-tag">HTML</span>
-                        <span class="project-tag">CSS</span>
-                        <span class="project-tag">JavaScript</span>
-
-                     </p>
-
-                  </span>
-
-               </span>
-               <!-- END ROCK PAPER SCISSORS PROJECT TILE -->
-
-            </a>
-
-            <!-- START PHONE NUMBER GENERATOR PROJECT TILE -->
-            <a href="https://sherpadndabambi.github.io/phone-number-generator/" target="_blank">
-
-               <span class="project-tile">
-
-                  <figure class="project-thumbnail">
-
-                     <img alt="Phone Number Generator thumbnail" src="https://sherpadndabambi.github.io/phone-number-generator/img/og-image.jpg">
-
-                  </figure>
-
-                  <span class="project-details">
-
-                     <h3 class="project-title">Phone Number Generator</h3>
-
-                     <p class="project-description">Generate random phone numbers from random countries in bulk.</p>
-
-                     <p class="project-tag-container">
-
-                        <span class="project-tag">HTML</span>
-                        <span class="project-tag">CSS</span>
-                        <span class="project-tag">JavaScript</span>
-                        <span class="project-tag">jQuery</span>
-
-                     </p>
-
-                  </span>
-
-               </span>
-               <!-- END PHONE NUMBER GENERATOR PROJECT TILE -->
-
-            </a>
-
-            <!-- START DIFFCHECKER CLONE PROJECT TILE -->
-            <a href="https://sherpadndabambi.github.io/diffchecker-clone/" target="_blank">
-
-               <span class="project-tile">
-
-                  <figure class="project-thumbnail">
-
-                     <img alt="Diffchecker Clone thumbnail" src="https://sherpadndabambi.github.io/diffchecker-clone/img/og-image.jpg">
-
-                  </figure>
-
-                  <span class="project-details">
-
-                     <h3 class="project-title">Diffchecker Clone</h3>
-
-                     <p class="project-description">A clone of Diffchecker that displays the diff in a separate window.</p>
-
-                     <p class="project-tag-container">
-
-                        <span class="project-tag">HTML</span>
-                        <span class="project-tag">CSS</span>
-                        <span class="project-tag">JavaScript</span>
-
-                     </p>
-
-                  </span>
-
-               </span>
-               <!-- END DIFFCHECKER CLONE PROJECT TILE -->
-
-            </a>
-
-            <a href="https://github.com/SherpadNdabambi?tab=repositories" target="_blank">More</a>
-
-         </div>
-
+        <h2>Projects</h2>
+
+        <div id="projects-grid">
+          <!-- START TIMER PROJECT TILE -->
+          <a href="https://timer.infinityfreeapp.com/" target="_blank">
+            <span class="project-tile">
+              <figure class="project-thumbnail">
+                <img
+                  alt="Timer thumbnail"
+                  src="https://sherpadndabambi.github.io/timer/img/og-image.jpg"
+                />
+              </figure>
+
+              <span class="project-details">
+                <h3 class="project-title">Timer</h3>
+
+                <p class="project-description">
+                  Timer allows you to track your work time using a pomodoro
+                  timer, stopwatch, or countdown timer.
+                </p>
+
+                <p class="project-tag-container">
+                  <span class="project-tag">HTML</span>
+                  <span class="project-tag">CSS</span>
+                  <span class="project-tag">JavaScript</span>
+                  <span class="project-tag">jQuery</span>
+                  <span class="project-tag">PHP</span>
+                  <span class="project-tag">SQL</span>
+                </p>
+              </span>
+            </span>
+            <!-- END TIMER PROJECT TILE -->
+          </a>
+
+          <!-- START CUSTOMER SUPPORT SYSTEM DASHBOARD PROJECT TILE -->
+          <a href="https://crm-dashboard.infinityfreeapp.com/" target="_blank">
+            <span class="project-tile">
+              <figure class="project-thumbnail">
+                <img
+                  alt="Customer Support System Dashboard thumbnail"
+                  src="https://sherpadndabambi.github.io/customer-support-system-dashboard/img/og-image.jpg"
+                />
+              </figure>
+
+              <span class="project-details">
+                <h3 class="project-title">Customer Support System Dashboard</h3>
+
+                <p class="project-description">
+                  A project using SQL, PHP, HTML, and JavaScript to generate
+                  reports from mock customer support data.
+                </p>
+
+                <p class="project-tag-container">
+                  <span class="project-tag">HTML</span>
+                  <span class="project-tag">CSS</span>
+                  <span class="project-tag">JavaScript</span>
+                  <span class="project-tag">jQuery</span>
+                  <span class="project-tag">PHP</span>
+                  <span class="project-tag">SQL</span>
+                </p>
+              </span>
+            </span>
+            <!-- END CUSTOMER SUPPORT SYSTEM DASHBOARD PROJECT TILE -->
+          </a>
+
+          <!-- START COLOR MIXER PROJECT TILE -->
+          <a
+            href="https://sherpadndabambi.github.io/colour-mixer/"
+            target="_blank"
+          >
+            <span class="project-tile">
+              <figure class="project-thumbnail">
+                <img
+                  alt="Color Mixer thumbnail"
+                  src="https://sherpadndabambi.github.io/colour-mixer/img/og-image.jpg"
+                />
+              </figure>
+
+              <span class="project-details">
+                <h3 class="project-title">Color Mixer</h3>
+
+                <p class="project-description">
+                  Mix primary colours and get their hex codes.
+                </p>
+
+                <p class="project-tag-container">
+                  <span class="project-tag">HTML</span>
+                  <span class="project-tag">CSS</span>
+                  <span class="project-tag">JavaScript</span>
+                </p>
+              </span>
+            </span>
+            <!-- END COLOR MIXER PROJECT TILE -->
+          </a>
+
+          <!-- START EDUCATIONAL GAMING SITE PROJECT TILE -->
+          <a
+            href="https://sherpadndabambi.github.io/educational-gaming-site/"
+            target="_blank"
+          >
+            <span class="project-tile">
+              <figure class="project-thumbnail">
+                <img
+                  alt="Educational Gaming Site thumbnail"
+                  src="https://sherpadndabambi.github.io/educational-gaming-site/img/og-image.jpg"
+                />
+              </figure>
+
+              <span class="project-details">
+                <h3 class="project-title">Educational Gaming Site</h3>
+
+                <p class="project-description">
+                  Test your knowledge of Mother Nature with a fun quiz.
+                </p>
+
+                <p class="project-tag-container">
+                  <span class="project-tag">HTML</span>
+                  <span class="project-tag">CSS</span>
+                  <span class="project-tag">JavaScript</span>
+                </p>
+              </span>
+            </span>
+            <!-- END EDUCATIONAL GAMING SITE PROJECT TILE -->
+          </a>
+
+          <!-- START ROCK PAPER SCISSORS PROJECT TILE -->
+          <a
+            href="https://sherpadndabambi.github.io/rock-paper-scissors/"
+            target="_blank"
+          >
+            <span class="project-tile">
+              <figure class="project-thumbnail">
+                <img
+                  alt="Rock Paper Scissors thumbnail"
+                  src="https://sherpadndabambi.github.io/rock-paper-scissors/img/og-image.jpg"
+                />
+              </figure>
+
+              <span class="project-details">
+                <h3 class="project-title">Rock Paper Scissors</h3>
+
+                <p class="project-description">Play Rock Paper Scissors.</p>
+
+                <p class="project-tag-container">
+                  <span class="project-tag">HTML</span>
+                  <span class="project-tag">CSS</span>
+                  <span class="project-tag">JavaScript</span>
+                </p>
+              </span>
+            </span>
+            <!-- END ROCK PAPER SCISSORS PROJECT TILE -->
+          </a>
+
+          <!-- START PHONE NUMBER GENERATOR PROJECT TILE -->
+          <a
+            href="https://sherpadndabambi.github.io/phone-number-generator/"
+            target="_blank"
+          >
+            <span class="project-tile">
+              <figure class="project-thumbnail">
+                <img
+                  alt="Phone Number Generator thumbnail"
+                  src="https://sherpadndabambi.github.io/phone-number-generator/img/og-image.jpg"
+                />
+              </figure>
+
+              <span class="project-details">
+                <h3 class="project-title">Phone Number Generator</h3>
+
+                <p class="project-description">
+                  Generate random phone numbers from random countries in bulk.
+                </p>
+
+                <p class="project-tag-container">
+                  <span class="project-tag">HTML</span>
+                  <span class="project-tag">CSS</span>
+                  <span class="project-tag">JavaScript</span>
+                  <span class="project-tag">jQuery</span>
+                </p>
+              </span>
+            </span>
+            <!-- END PHONE NUMBER GENERATOR PROJECT TILE -->
+          </a>
+
+          <!-- START DIFFCHECKER CLONE PROJECT TILE -->
+          <a
+            href="https://sherpadndabambi.github.io/diffchecker-clone/"
+            target="_blank"
+          >
+            <span class="project-tile">
+              <figure class="project-thumbnail">
+                <img
+                  alt="Diffchecker Clone thumbnail"
+                  src="https://sherpadndabambi.github.io/diffchecker-clone/img/og-image.jpg"
+                />
+              </figure>
+
+              <span class="project-details">
+                <h3 class="project-title">Diffchecker Clone</h3>
+
+                <p class="project-description">
+                  A clone of Diffchecker that displays the diff in a separate
+                  window.
+                </p>
+
+                <p class="project-tag-container">
+                  <span class="project-tag">HTML</span>
+                  <span class="project-tag">CSS</span>
+                  <span class="project-tag">JavaScript</span>
+                </p>
+              </span>
+            </span>
+            <!-- END DIFFCHECKER CLONE PROJECT TILE -->
+          </a>
+
+          <a
+            href="https://github.com/SherpadNdabambi?tab=repositories"
+            target="_blank"
+            >More</a
+          >
+        </div>
       </section>
       <!-- END PROJECTS SECTION -->
 
       <!-- START SOCIAL LINKS SECTION -->
       <section id="links">
+        <h2>Connect With Me</h2>
 
-         <h2>Connect With Me</h2>
+        <div id="social-icon-grid-container">
+          <div id="social-icon-grid">
+            <a
+              href="https://www.linkedin.com/in/sherpad-ndabambi"
+              target="_blank"
+            >
+              <figure>
+                <img
+                  alt="LinkedIn icon"
+                  class="social-icon"
+                  src="./img/linkedin-svgrepo-com.svg"
+                />
 
-         <div id="social-icon-grid-container">
+                <figcaption>LinkedIn</figcaption>
+              </figure>
+            </a>
 
-            <div id="social-icon-grid">
+            <a
+              href="https://github.com/SherpadNdabambi"
+              id="profile-link"
+              target="_blank"
+            >
+              <figure>
+                <img
+                  alt="GitHub icon"
+                  class="social-icon"
+                  src="./img/github-svgrepo-com.svg"
+                />
 
-               <a href="https://www.linkedin.com/in/sherpad-ndabambi" target="_blank">
+                <figcaption>GitHub</figcaption>
+              </figure>
+            </a>
 
-                  <figure>
+            <a href="https://twitter.com/sherpadNdabambi" target="_blank">
+              <figure>
+                <img
+                  alt="Twitter icon"
+                  class="social-icon"
+                  src="./img/Twitter-logo.svg"
+                />
 
-                     <img alt="LinkedIn icon" class="social-icon" src="./img/linkedin-svgrepo-com.svg">
+                <figcaption>Twitter</figcaption>
+              </figure>
+            </a>
 
-                     <figcaption>LinkedIn</figcaption>
+            <a
+              href="https://www.facebook.com/sherpadg.ndabambi"
+              target="_blank"
+            >
+              <figure>
+                <img
+                  alt="Facebook icon"
+                  class="social-icon"
+                  src="./img/Facebook_f_logo_(2021).svg"
+                />
 
-                  </figure>
+                <figcaption>Facebook</figcaption>
+              </figure>
+            </a>
 
-               </a>
+            <a href="mailto:sgndabambi@gmail.com" target="_blank">
+              <figure>
+                <img
+                  alt="Email icon"
+                  class="social-icon"
+                  src="./img/email-svgrepo-com.svg"
+                />
 
-               <a href="https://github.com/SherpadNdabambi" id="profile-link" target="_blank">
-
-                  <figure>
-
-                     <img alt="GitHub icon" class="social-icon" src="./img/github-svgrepo-com.svg">
-
-                     <figcaption>GitHub</figcaption>
-
-                  </figure>
-
-               </a>
-
-               <a href="https://twitter.com/sherpadNdabambi" target="_blank">
-
-                  <figure>
-
-                     <img alt="Twitter icon" class="social-icon" src="./img/Twitter-logo.svg">
-
-                     <figcaption>Twitter</figcaption>
-
-                  </figure>
-
-               </a>
-
-               <a href="https://www.facebook.com/sherpadg.ndabambi" target="_blank">
-
-                  <figure>
-
-                     <img alt="Facebook icon" class="social-icon" src="./img/Facebook_f_logo_(2021).svg">
-
-                     <figcaption>Facebook</figcaption>
-
-                  </figure>
-
-               </a>
-
-               <a href="mailto:sgndabambi@gmail.com" target="_blank">
-
-                  <figure>
-
-                     <img alt="Email icon" class="social-icon" src="./img/email-svgrepo-com.svg">
-
-                     <figcaption>Email</figcaption>
-
-                  </figure>
-
-               </a>
-
-            </div>
-
-         </div>
-
+                <figcaption>Email</figcaption>
+              </figure>
+            </a>
+          </div>
+        </div>
       </section>
       <!-- END SOCIAL LINKS SECTION -->
+    </main>
+    <!-- END PAGE -->
 
-	</main>
-   <!-- END PAGE -->
-
-	<!--Footer-->
-	<footer class="container">
-
-		<div id="copyright" class="center middle">
-
-			&copy Sherpad Ndabambi <span id="footerYear">2023</span>
-
-		</div>
-		
-	</footer>
-
-</body>
-
+    <!--Footer-->
+    <footer class="container">
+      <div id="copyright" class="center middle">
+        &copy Sherpad Ndabambi <span id="footerYear">2023</span>
+      </div>
+    </footer>
+  </body>
 </html>
