@@ -196,6 +196,11 @@ main {
 	margin-right: 8px;
 }
 
+#welcome-section p {
+	max-width: 632.7px;
+	text-align: justify;
+}
+
 #self-portrait {
 	border: 3px var(--dark-grey-complement) solid;
 	border-radius: 50%;
