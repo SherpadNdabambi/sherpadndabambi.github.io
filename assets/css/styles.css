@@ -139,9 +139,13 @@ nav ul li a {
   word-spacing: 10px;
 }
 
-.filter-button:not(.filter-button-active):hover {
+.filter-button:hover {
   cursor: pointer;
   opacity: 0.5;
+}
+
+.filter-button-active:hover {
+  cursor: not-allowed;
 }
 
 .project-card {
