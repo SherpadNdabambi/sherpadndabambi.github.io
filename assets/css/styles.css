@@ -103,7 +103,7 @@ header.scrolled {
 
 hr {
   border-bottom: 1px solid rgba(0, 0, 0, 0.4);
-  margin: 0;
+  margin-bottom: 0;
   width: 95%;
 }
 
