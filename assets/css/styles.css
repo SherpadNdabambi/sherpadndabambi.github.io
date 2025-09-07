@@ -8,15 +8,9 @@
 
 /* Start @keyframes rules */
 
-@keyframes blink {
-  50% {
-    opacity: 0;
-  }
-}
-
 @keyframes slide {
   100% {
-    top: -84px;
+    top: -56px;
   }
 }
 
@@ -25,13 +19,6 @@
   60% {
     left: calc(100% + 1px);
   }
-}
-
-/* Reset default margins and padding */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 /* End @keyframes rules */
@@ -50,7 +37,9 @@
 }
 
 .bio {
+  margin-top: 0;
   max-width: 100%;
+  text-align: justify;
 }
 
 body {
@@ -59,6 +48,11 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+}
+
+.filter-active {
+  border-bottom: 2px solid var(--red);
+  color: var(--red);
 }
 
 footer {
@@ -70,7 +64,12 @@ footer {
 
 h1 {
   font-size: 1.5em;
+  margin-bottom: 0;
   width: 100%;
+}
+
+h2 {
+  margin-bottom: 0;
 }
 
 header {
@@ -82,7 +81,7 @@ header {
   position: fixed;
   transition: background-color 0.3s ease-in-out;
   width: 100vw;
-  z-index: 1;
+  z-index: 2;
 }
 
 header.scrolled {
@@ -90,7 +89,7 @@ header.scrolled {
 }
 
 .hero {
-  padding: 75px 20px 0;
+  padding: 90px 20px 0;
 }
 
 .hero-img {
@@ -132,20 +131,14 @@ nav ul li a {
   text-decoration: none;
 }
 
-p {
-  text-align: justify;
-}
-
 .pagination {
   margin-top: 20px;
 }
 
-/* .profile-img {
-  border-radius: 50%;
-  height: 150px;
-  margin-top: 20px;
-  width: 150px;
-} */
+.portfolio-flters {
+  line-height: 27px;
+  word-spacing: 10px;
+}
 
 .project-card {
   background-color: var(--lighter-grey);
@@ -170,7 +163,6 @@ p {
 
 .projects {
   padding: 0 20px;
-  text-align: center;
 }
 
 .red-text {
@@ -236,25 +228,21 @@ section {
 
 .typewriter-text {
   height: 28px;
-  margin-left: 4px;
+  margin-top: 0;
   overflow: hidden;
-}
-
-.typewriter-text::after {
-  content: "_";
-  animation: blink 1s step-end infinite;
+  padding: 0;
 }
 
 .typewriter-text li {
+  animation: slide 6s steps(2) infinite;
   position: relative;
-  animation: slide 9s steps(3) infinite;
   top: 0;
 }
 
 .typewriter-text li::after {
   animation: typing 3s steps(21) infinite;
   background-color: var(--light-grey);
-  border-left: 2px solid;
+  border-left: 2px solid var(--red);
   content: "";
   height: 100%;
   left: 0%;
@@ -289,12 +277,6 @@ section {
     justify-content: space-around;
     padding: 50px 20px;
   }
-
-  /* .profile-img {
-    height: 200px;
-    margin-top: 0;
-    width: 200px;
-  } */
 
   .project-card {
     padding: 20px;
