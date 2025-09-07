@@ -28,13 +28,26 @@
 }
 
 /* Reset default margins and padding */
-/* * {
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-} */
+}
 
 /* End @keyframes rules */
+
+.arc {
+  background: #ecf0f3;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  height: 200px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-42%, -37%);
+  width: 200px;
+  z-index: 1;
+}
 
 .bio {
   max-width: 100%;
@@ -80,6 +93,17 @@ header.scrolled {
   padding: 75px 20px 0;
 }
 
+.hero-img {
+  border-radius: 0 0 69px 120px;
+  max-width: 200px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-img-container {
+  position: relative;
+}
+
 hr {
   border-bottom: 1px solid rgba(0, 0, 0, 0.4);
   width: 95%;
@@ -116,12 +140,12 @@ p {
   margin-top: 20px;
 }
 
-.profile-img {
+/* .profile-img {
   border-radius: 50%;
   height: 150px;
   margin-top: 20px;
   width: 150px;
-}
+} */
 
 .project-card {
   background-color: var(--lighter-grey);
@@ -266,11 +290,11 @@ section {
     padding: 50px 20px;
   }
 
-  .profile-img {
+  /* .profile-img {
     height: 200px;
     margin-top: 0;
     width: 200px;
-  }
+  } */
 
   .project-card {
     padding: 20px;
