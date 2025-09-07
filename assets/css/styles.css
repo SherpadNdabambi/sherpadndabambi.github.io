@@ -50,7 +50,7 @@ body {
   padding: 0;
 }
 
-.filter-active {
+.filter-button-active {
   border-bottom: 2px solid var(--red);
   color: var(--red);
 }
@@ -139,7 +139,7 @@ nav ul li a {
   word-spacing: 10px;
 }
 
-.filter-button span:not(.filter-button-active):hover {
+.filter-button:not(.filter-button-active):hover {
   cursor: pointer;
   opacity: 0.5;
 }
