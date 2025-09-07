@@ -139,7 +139,7 @@ nav ul li a {
   word-spacing: 10px;
 }
 
-.filter-button:hover {
+.filter-button:not(.filter-button-active):hover {
   cursor: pointer;
   opacity: 0.5;
 }
