@@ -1,7 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const header = document.getElementsByTagName("header")[0],
-    topButton = document.getElementsByClassName("top-button")[0];
-  const scrollThreshold = 1;
+  initHeaderScrollEffect();
+});
+
+function initHeaderScrollEffect() {
+  const header: HTMLElement = document.getElementsByTagName("header")[0],
+    topButton: HTMLElement = document.getElementById("top-button");
+  const scrollThreshold: number = 1;
 
   window.addEventListener("scroll", function () {
     if (window.scrollY > scrollThreshold) {
@@ -12,4 +16,4 @@ document.addEventListener("DOMContentLoaded", function () {
       topButton.classList.remove("active");
     }
   });
-});
+}
