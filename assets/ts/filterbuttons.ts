@@ -13,7 +13,9 @@ function initFilterButtons() {
 }
 
 function filterSelection(filter: string) {
-  const activeButton: HTMLElement = document.querySelector(".filter-active"),
+  const activeButton: HTMLElement = document.querySelector(
+      ".filter-button-active"
+    ),
     clickedButton: HTMLElement = document.querySelector(
       ".filter-button[data-filter='" + filter + "']"
     ),
@@ -32,6 +34,6 @@ function filterSelection(filter: string) {
       }
     });
   }
-  activeButton.classList.toggle("filter-active");
-  clickedButton.classList.toggle("filter-active");
+  activeButton.classList.toggle("filter-button-active");
+  clickedButton.classList.toggle("filter-button-active");
 }
