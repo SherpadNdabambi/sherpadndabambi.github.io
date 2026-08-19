@@ -14,10 +14,10 @@ function initFilterButtons() {
 
 function filterSelection(filter: string) {
   const activeButton: HTMLElement = document.querySelector(
-      ".filter-button-active"
+      ".filter-button-active",
     ),
     clickedButton: HTMLElement = document.querySelector(
-      ".filter-button[data-filter='" + filter + "']"
+      ".filter-button[data-filter='" + filter + "']",
     ),
     filterItems: NodeListOf<HTMLElement> =
       document.querySelectorAll(".filter-item");
