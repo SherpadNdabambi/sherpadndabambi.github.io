@@ -23,12 +23,12 @@ function filterSelection(filter: string) {
       document.querySelectorAll(".filter-item");
   if (filter === "*") {
     filterItems.forEach((item: HTMLElement) => {
-      item.style.display = "block";
+      item.style.display = "";
     });
   } else {
     filterItems.forEach((item: HTMLElement) => {
       if (item.getAttribute("filter-categories")?.includes(filter)) {
-        item.style.display = "block";
+        item.style.display = "";
       } else {
         item.style.display = "none";
       }

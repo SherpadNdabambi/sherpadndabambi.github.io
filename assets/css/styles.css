@@ -157,22 +157,41 @@ nav ul li a {
 }
 
 .project-card {
-  display: flex; 
-  flex-direction: column;
-  justify-content: center;
   background-color: var(--lighter-grey);
   border-radius: 10px;
   box-shadow:
     20px 20px 60px rgb(190, 190, 190),
     -20px -20px 60px white;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding: 15px;
   position: relative;
   text-align: center;
 }
 
+.project-grid > a {
+  align-items: center;
+  color: inherit;
+  display: flex;
+  text-decoration: none;
+}
+
 .project-card img {
   height: auto;
   width: 100%;
+}
+
+.more-projects-card img {
+  align-self: center;
+  aspect-ratio: 16 / 9;
+  width: 50%;
+}
+
+.project-card:hover {
+  color: var(--primary);
+  opacity: 0.8;
 }
 
 .project-grid {
