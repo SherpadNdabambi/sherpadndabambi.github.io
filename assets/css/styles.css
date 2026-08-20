@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 :root {
   --dark-grey: rgb(51, 51, 51);
   --light-grey: rgb(233, 236, 239);
@@ -10,7 +14,7 @@
 
 @keyframes slide {
   100% {
-    top: -56px;
+    top: -2.4em;
   }
 }
 
@@ -31,7 +35,7 @@
   left: 50%;
   position: absolute;
   top: 50%;
-  transform: translate(-42%, -37%);
+  transform: translate(-50%, -50%);
   width: 200px;
   z-index: 1;
 }
@@ -61,7 +65,7 @@ footer {
 }
 
 h1 {
-  font-size: 1.5em;
+  /*font-size: 1.5em;*/
   margin-bottom: 0;
   width: 100%;
 }
@@ -77,8 +81,10 @@ header {
   justify-content: space-between;
   padding: 20px;
   position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   transition: background-color 0.3s ease-in-out;
-  width: 100vw;
   z-index: 2;
 }
 
@@ -91,7 +97,7 @@ header.scrolled {
 }
 
 .hero-img {
-  border-radius: 0 0 69px 120px;
+  border-radius: 50% 50% 45% 45% / 40% 40% 60% 60%;
   max-width: 200px;
   position: relative;
   z-index: 1;
@@ -118,11 +124,13 @@ nav {
   display: flex;
   font-size: 1.2rem;
   justify-content: space-between;
-  width: calc(100% - 40px);
+  width: 100%;
 }
 
 nav ul {
   display: none;
+  margin: 0;
+  padding: 0;
 }
 
 nav ul li a {
@@ -149,13 +157,16 @@ nav ul li a {
 }
 
 .project-card {
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
   background-color: var(--lighter-grey);
   border-radius: 10px;
-  /*  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);*/
   box-shadow:
     20px 20px 60px rgb(190, 190, 190),
     -20px -20px 60px white;
   padding: 15px;
+  text-align: center;
 }
 
 .project-card img {
@@ -242,10 +253,12 @@ section {
 }
 
 .typewriter-text {
-  height: 28px;
+  height: 1.2em;
+  line-height: 1.2em;
   margin-top: 0;
   overflow: hidden;
   padding: 0;
+  list-style: none;
 }
 
 .typewriter-text li {
@@ -279,23 +292,12 @@ section {
     padding: 20px;
   }
 
-  h1 {
-    font-size: 2.5em;
-  }
-
   header {
     padding: 20px;
   }
 
-  .hero {
-    flex-direction: row-reverse;
-    justify-content: space-around;
-    padding: 50px 20px;
-  }
-
   .project-card {
     padding: 20px;
-    text-align: center;
   }
 
   .project-grid {
@@ -308,6 +310,15 @@ section {
 }
 
 @media (min-width: 769px) {
+  .hero {
+    flex-direction: row-reverse;
+    justify-content: space-around;
+  }
+
+  nav .fa-bars {
+    display: none;
+  }
+
   nav ul {
     display: flex;
     gap: 30px;
