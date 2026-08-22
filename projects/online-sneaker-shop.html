@@ -1,0 +1,342 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Case Study: Online Sneaker Shop - Sherpad Ndabambi</title>
+
+    <meta
+      name="description"
+      content="Engineering case study for the Online Sneaker Shop flagship project, detailing system architecture, serverless PostgreSQL migration, object storage, and production deployment."
+    />
+
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+
+    <link rel="icon" type="image/png" href="../assets/img/favicon.png" />
+
+    <script
+      src="https://kit.fontawesome.com/709e25c218.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <a
+          href="../index.html"
+          style="display: flex; align-items: center; text-decoration: none"
+        >
+          <img src="../assets/img/favicon.png" alt="Logo" class="logo" />
+        </a>
+
+        <ul>
+          <li><a href="../index.html" class="back-link"><i class="fa-solid fa-arrow-left"></i> Portfolio</a></li>
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#challenge">Challenge</a></li>
+          <li><a href="#architecture">Architecture</a></li>
+          <li><a href="#decisions">Decisions</a></li>
+          <li><a href="#deployment">Deployment</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="case-study-header">
+      <h1 class="primary-text">Online Sneaker Shop</h1>
+
+      <p class="section-subtitle" style="margin: 10px auto">
+        Engineering Case Study — Distributed Web Architecture & Production Cloud
+        Deployment
+      </p>
+
+      <div style="margin-top: 15px">
+        <a
+          href="https://sneakers.jindasoftconsulting.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="link-btn link-btn-primary"
+        >
+          <i class="fa-solid fa-arrow-up-right-from-square"></i> Visit Live
+          Application
+        </a>
+      </div>
+    </div>
+
+    <main class="case-study-body">
+      <!-- Overview -->
+
+      <section id="overview" class="case-study-section">
+        <h2>1. Overview</h2>
+
+        <p>
+          The <strong>Online Sneaker Shop</strong> is a production-oriented
+          e-commerce application designed to demonstrate full-stack software
+          engineering capabilities, clean application boundaries, distributed
+          cloud deployment, and remote database management.
+        </p>
+
+        <p>
+          While presenting an interactive storefront for browsing and purchasing
+          footwear, the primary objective of this project was to establish an
+          operational system that advances beyond local development setups into
+          a resilient, production-ready cloud deployment.
+        </p>
+      </section>
+
+      <!-- The Challenge -->
+
+      <section id="challenge" class="case-study-section">
+        <h2>2. The Challenge</h2>
+
+        <p>
+          Developing a local application is straightforward, but taking a
+          multi-component system into production presents real-world engineering
+          hurdles. The objective was to evolve a prototype into a production
+          platform while addressing key architectural requirements:
+        </p>
+
+        <ul>
+          <li>
+            Decoupling the frontend presentation layer from the backend API
+            services.
+          </li>
+
+          <li>
+            Migrating data persistence from a local database instance to a
+            serverless, cloud-hosted PostgreSQL database.
+          </li>
+
+          <li>
+            Decoupling file and media assets from application web servers using
+            cloud object storage.
+          </li>
+
+          <li>
+            Configuring HTTPS, custom domain routing, and CORS policies across
+            independent service hosts.
+          </li>
+        </ul>
+      </section>
+
+      <!-- Architecture -->
+
+      <section id="architecture" class="case-study-section">
+        <h2>3. Architecture</h2>
+
+        <p>
+          The system follows a modern decoupled client-server architecture
+          consisting of three core tiers:
+        </p>
+
+        <ul>
+          <li>
+            <strong>Frontend Tier:</strong> A reactive client application built
+            with React and modern CSS, hosted on high-availability edge static
+            infrastructure.
+          </li>
+
+          <li>
+            <strong>API Tier:</strong> Node.js and Express RESTful API providing
+            business logic, authentication endpoints, and product/order pipeline
+            operations.
+          </li>
+
+          <li>
+            <strong>Persistence Tier:</strong> Remote PostgreSQL database hosted
+            on Neon serverless infrastructure, accompanied by cloud object
+            storage for media and asset delivery.
+          </li>
+        </ul>
+
+        <div style="margin-top: 25px">
+          <h3>System Architecture Diagram</h3>
+
+          <div class="arch-diagram-container">
+            <img
+              src="../assets/img/Online Sneaker Shop System Architecture Diagram.svg"
+              alt="Online Sneaker Shop System Architecture Diagram"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Key Engineering Decisions -->
+
+      <section id="decisions" class="case-study-section">
+        <h2>4. Key Engineering Decisions</h2>
+
+        <div class="decision-block">
+          <h4>1. Migration to Serverless PostgreSQL (Neon)</h4>
+
+          <p>
+            <strong>Problem:</strong> Initial development relied on a local
+            PostgreSQL instance, blocking cloud deployment and remote testing.
+          </p>
+
+          <p>
+            <strong>Decision:</strong> Provisioned a Neon serverless PostgreSQL
+            database with connection pooling enabled.
+          </p>
+
+          <p>
+            <strong>Reasoning:</strong> Neon provides full PostgreSQL
+            compatibility, automated branch management, and connection pooling
+            needed for serverless environment scaling.
+          </p>
+
+          <p>
+            <strong>Result:</strong> Reliable remote database connectivity with
+            low-latency queries and zero local database maintenance
+            requirements.
+          </p>
+        </div>
+
+        <div class="decision-block">
+          <h4>2. Decoupled Cloud Object Storage for Media</h4>
+
+          <p>
+            <strong>Problem:</strong> Storing image assets locally on the web
+            server container caused storage bloat and created dynamic deployment
+            state issues.
+          </p>
+
+          <p>
+            <strong>Decision:</strong> Offloaded image upload and serving to
+            dedicated cloud object storage.
+          </p>
+
+          <p>
+            <strong>Reasoning:</strong> Cloud object storage provides direct URL
+            access, global caching capability, and removes asset state from
+            application servers.
+          </p>
+
+          <p>
+            <strong>Result:</strong> Web servers remain stateless and fast,
+            while image loading performance improved significantly.
+          </p>
+        </div>
+
+        <div class="decision-block">
+          <h4>3. Independent Workspace Separation</h4>
+
+          <p>
+            <strong>Problem:</strong> The initial repository structure combined
+            frontend and backend dependencies into a tight coupling that caused
+            version conflicts during build steps.
+          </p>
+
+          <p>
+            <strong>Decision:</strong> Re-architected dependency boundaries to
+            isolate the React client and Node.js backend build environments.
+          </p>
+
+          <p>
+            <strong>Reasoning:</strong> Isolated build pipelines allow packages
+            to upgrade independently without cascading dependency breakages.
+          </p>
+
+          <p>
+            <strong>Result:</strong> Simplified continuous integration build
+            steps and seamless cloud platform deployment.
+          </p>
+        </div>
+      </section>
+
+      <!-- Challenges & Solutions -->
+
+      <section class="case-study-section">
+        <h2>5. Challenges & Solutions</h2>
+
+        <h3>CORS & Cross-Domain Cookie Handling</h3>
+
+        <p>
+          <strong>Challenge:</strong> During initial production deployment,
+          secure session cookies failed to persist across the custom domain
+          boundaries connecting the API backend and React client.
+        </p>
+
+        <p>
+          <strong>Solution:</strong> Configured explicit CORS headers on Express
+          server, enabled <code>credentials: 'include'</code> on frontend
+          request clients, and aligned cross-site cookie attributes (<code
+            >SameSite=None; Secure</code
+          >) for HTTPS environments.
+        </p>
+      </section>
+
+      <!-- Deployment -->
+
+      <section id="deployment" class="case-study-section">
+        <h2>6. Production Deployment</h2>
+
+        <p>
+          The production system is fully deployed and accessible live under a
+          custom domain:
+        </p>
+
+        <p style="text-align: center; margin: 20px 0">
+          <a
+            href="https://sneakers.jindasoftconsulting.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style="font-weight: bold; font-size: 1.1rem; color: var(--primary)"
+          >
+            https://sneakers.jindasoftconsulting.com/
+          </a>
+        </p>
+
+        <p>
+          The deployment pipeline automatically builds and verifies frontend
+          assets and backend service containers upon production commits,
+          ensuring reliable uptime and continuous integration.
+        </p>
+      </section>
+
+      <!-- Results & Lessons Learned -->
+
+      <section class="case-study-section">
+        <h2>7. Results & Lessons Learned</h2>
+
+        <p>
+          Building and operating the Online Sneaker Shop established essential
+          engineering takeaways:
+        </p>
+
+        <ul>
+          <li>
+            <strong>Stateless Application Servers:</strong> Separating database
+            and object storage layers from compute containers is vital for
+            frictionless cloud deployments.
+          </li>
+
+          <li>
+            <strong>Production Environment Parity:</strong> Configuring
+            production environment variables, database SSL certificates, and
+            security headers early prevents deployment surprises.
+          </li>
+
+          <li>
+            <strong>Pragmatic Trade-offs:</strong> Selecting serverless cloud
+            infrastructure over raw VM provisioning reduced operational overhead
+            while preserving enterprise reliability.
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer style="margin-top: 40px">
+      <p>
+        &copy; Sherpad Ndabambi 2026 —
+        <a
+          href="../index.html"
+          style="color: var(--primary); text-decoration: none"
+          >Back to Portfolio Home</a
+        >
+      </p>
+    </footer>
+  </body>
+</html>

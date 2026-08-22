@@ -1,259 +1,384 @@
 <!doctype html>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sherpad Ndabambi - Developer Portfolio</title>
+
+    <title>Sherpad Ndabambi - Software Engineer Portfolio</title>
+
+    <meta
+      name="description"
+      content="Portfolio of Sherpad Ndabambi, a software engineer and problem solver specializing in full-stack applications, cloud architecture, DevOps, and Microsoft ecosystem solutions."
+    />
+
     <link rel="stylesheet" href="assets/css/styles.css" />
+
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/sherpadndabambi/tilting-card@v1.0.0/assets/css/tilting-card.css"
     />
+
     <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+
     <script
       src="https://kit.fontawesome.com/709e25c218.js"
       crossorigin="anonymous"
     ></script>
   </head>
+
   <body>
     <header>
       <nav>
         <img src="assets/img/favicon.png" alt="Logo" class="logo" />
+
         <i class="fa-solid fa-bars"></i>
+
         <ul>
           <li><a href="#about">About Me</a></li>
-          <li><a href="#projects">My Projects</a></li>
-          <li><a href="#contact">Contact Me</a></li>
+
+          <li><a href="#capabilities">Capabilities</a></li>
+
+          <li><a href="#microsoft-cloud">Microsoft & Cloud</a></li>
+
+          <li><a href="#projects">Projects</a></li>
+
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>
+
+    <!-- Hero / About Section -->
+
     <section id="about" class="hero">
       <div class="hero-img-container">
         <div class="arc"></div>
+
         <img
-          src="assets/img/sherpad.png"
+          src="assets/img/hero-img.png"
           alt="Sherpad Ndabambi"
           class="hero-img"
         />
       </div>
+
       <div>
         <h1>
-          Hello there 👋🏾<br />
-          I'm <span class="primary-text">Sherpad</span>
+          Hello there 👋🏾 <br />
+
+          I'm <span class="primary-text">Sherpad</span>. <br />
+
           <div class="typewriter-text-wrapper">
-            <ul class="typewriter-text">
-              <li>An <span class="primary-text">app developer.</span></li>
-              <li>A <span class="primary-text">problem solver.</span></li>
-            </ul>
+            <span id="typewriter-text" class="primary-text"
+              >A software engineer.</span
+            ><span class="typewriter-cursor" aria-hidden="true">|</span>
           </div>
         </h1>
+
         <div class="bio">
           <p>
-            I'm a software engineer and IT professional focused on building
-            practical, reliable solutions across cloud, identity, collaboration,
-            and modern web technologies.
+            I'm a software engineer and problem solver focused on building
+            practical, reliable systems across full-stack web applications,
+            cloud infrastructure, DevOps, and modern enterprise technologies.
           </p>
 
           <p>
-            My work sits at the intersection of software development and IT
-            infrastructure. I enjoy taking a problem from idea to
-            implementation—whether that means building a web application,
-            designing cloud architecture, automating workflows, or managing
-            Microsoft 365 and identity environments.
+            My engineering approach sits at the intersection of software design
+            and systems architecture. I take technical problems end-to-end—from
+            initial design and database modeling to cloud deployment, automated
+            workflows, and identity integration.
           </p>
 
-          <p>
-            I'm particularly interested in the Microsoft ecosystem, cloud
-            technologies, DevOps, and solutions that make businesses more
-            efficient. I'm constantly learning, experimenting, and turning what
-            I learn into working projects.
-          </p>
-
-          <p>
-            This portfolio is a collection of that journey: the things I've
-            built, the technologies I've worked with, and the problems I've
-            enjoyed solving.
+          <p id="contact">
+            I specialize in engineering robust web applications, leveraging
+            cloud platforms, and optimizing business operations with tailored
+            Microsoft 365, Entra ID, and cloud infrastructure solutions.
           </p>
         </div>
-        <div id="contact">
-          <p class="primary-text">CONNECT WITH ME</p>
-          <p class="social-media-links">
+
+        <div>
+          <p class="primary-text" style="font-weight: bold; margin-top: 20px">
+            CONNECT WITH ME
+          </p>
+
+          <div class="social-media-links">
             <a
-              alt="LinkedIn profile link"
+              aria-label="LinkedIn profile"
               class="social-media-link"
               href="https://www.linkedin.com/in/sherpad-ndabambi/"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <i class="fa-brands fa-linkedin-in"></i>
             </a>
+
             <a
-              alt="GitHub profile link"
+              aria-label="GitHub profile"
               class="social-media-link"
-              href="http://github.com/sherpadNdabambi/"
+              href="https://github.com/sherpadNdabambi/"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <i class="fa-brands fa-github"></i>
             </a>
+
             <a
-              alt="X profile link"
+              aria-label="X profile"
               class="social-media-link"
               href="https://x.com/SherpadN1552"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <i class="fa-brands fa-x-twitter"></i>
             </a>
+
             <a
-              alt="Facebook profile link"
+              aria-label="Facebook profile"
               class="social-media-link"
               href="https://www.facebook.com/sherpadg.ndabambi"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <i class="fa-brands fa-facebook-f"></i>
             </a>
+
             <a
-              alt="Email link"
+              aria-label="Email contact"
               class="social-media-link"
               href="mailto:sgndabambi@gmail.com"
-              target="_blank"
             >
               <i class="fa-solid fa-envelope"></i>
             </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr id="capabilities" />
+
+    <!-- Capabilities Section -->
+
+    <section class="capabilities">
+      <h2 class="section-title">Capabilities</h2>
+
+      <p class="section-subtitle">
+        Core technical disciplines and problem-solving focus areas
+      </p>
+
+      <div class="capabilities-grid">
+        <div class="capability-card tilting-card">
+          <div class="card-icon"><i class="fa-solid fa-code"></i></div>
+
+          <h3>Software Engineering</h3>
+
+          <p>
+            Full-stack web application development, RESTful APIs, clean
+            architecture, relational database design, and responsive frontend
+            implementations.
+          </p>
+        </div>
+
+        <div class="capability-card tilting-card">
+          <div class="card-icon"><i class="fa-solid fa-cloud"></i></div>
+
+          <h3>Cloud & DevOps</h3>
+
+          <p>
+            Cloud deployment, serverless databases, managed application
+            environments, object storage integration, CI/CD pipelines, and
+            infrastructure management.
+          </p>
+        </div>
+
+        <div class="capability-card tilting-card">
+          <div class="card-icon"><i class="fa-solid fa-user-shield"></i></div>
+
+          <h3>Microsoft 365 & Identity</h3>
+
+          <p>
+            Identity & Access Management (IAM) with Microsoft Entra ID,
+            enterprise collaboration solutions, SharePoint architecture, and
+            security policies.
+          </p>
+        </div>
+
+        <div class="capability-card tilting-card">
+          <div class="card-icon"><i class="fa-solid fa-gears"></i></div>
+
+          <h3>Business Solutions</h3>
+
+          <p>
+            Automated business processes, data integration, operational
+            efficiency solutions, and practical tech implementations aligned
+            with organization goals.
           </p>
         </div>
       </div>
     </section>
-    <hr />
-    <section id="projects" class="projects">
-      <h2>My Projects</h2>
-      <p class="portfolio-filters">
-        <span class="filter-button filter-button-active" data-filter="*"
-          >All</span
-        >
-        <span class="filter-button" data-filter="filter-html">HTML</span>
-        <span class="filter-button" data-filter="filter-css">CSS</span>
-        <span class="filter-button" data-filter="filter-js">JavaScript</span>
-        <span class="filter-button" data-filter="filter-jquery">jQuery</span>
-        <span class="filter-button" data-filter="filter-php">PHP</span>
-        <span class="filter-button" data-filter="filter-sql">SQL</span>
+
+    <hr id="microsoft-cloud" />
+
+    <!-- Microsoft & Cloud Section -->
+
+    <section class="microsoft-cloud">
+      <h2 class="section-title">Microsoft & Cloud Specialization</h2>
+
+      <p class="section-subtitle">
+        Engineering solutions within the Microsoft cloud ecosystem and identity
+        infrastructure
       </p>
-      <div class="project-grid">
-        <a
-          class="filter-item"
-          filter-categories="filter-css filter-html filter-jquery filter-js filter-php filter-sql"
-          href="https://sherpadndabambi.github.io/timer/"
-          target="_blank"
-        >
-          <div class="pagination-item project-card tilting-card">
-            <img src="assets/img/timer-og-image.jpg" alt="Timer" />
-            <p>Timer</p>
+
+      <div class="microsoft-grid">
+        <div class="microsoft-card tilting-card">
+          <div class="card-icon"><i class="fa-solid fa-id-badge"></i></div>
+
+          <h3>Identity & Access Management</h3>
+
+          <p>
+            Configuring and operating Microsoft Entra ID (Azure AD), role-based
+            access control (RBAC), single sign-on (SSO), and secure identity
+            governance for modern systems.
+          </p>
+        </div>
+
+        <div class="microsoft-card tilting-card">
+          <div class="card-icon">
+            <i class="fa-solid fa-diagram-project"></i>
           </div>
-        </a>
-        <a
-          class="filter-item"
-          filter-categories="filter-css filter-html filter-jquery filter-js filter-php filter-sql"
-          href="https://sherpadndabambi.github.io/customer-support-system-dashboard/"
-          target="_blank"
-        >
-          <div class="pagination-item project-card tilting-card">
-            <img
-              src="assets/img/customer-support-system-dashboard-og-image.jpg"
-              alt="CRM Dashboard"
-            />
-            <p>CRM Dashboard</p>
-          </div>
-        </a>
-        <a
-          class="filter-item"
-          filter-categories="filter-css filter-html filter-js"
-          href="https://sherpadndabambi.github.io/colour-mixer/"
-          target="_blank"
-        >
-          <div class="pagination-item project-card tilting-card">
-            <img src="assets/img/colour-mixer-og-image.jpg" alt="Color Mixer" />
-            <p>Color Mixer</p>
-          </div>
-        </a>
-        <a
-          class="filter-item"
-          filter-categories="filter-css filter-html filter-js"
-          href="https://sherpadndabambi.github.io/educational-gaming-site/"
-          target="_blank"
-        >
-          <div class="pagination-item project-card tilting-card">
-            <img
-              src="assets/img/educational-gaming-site-og-image.jpg"
-              alt="Educational Gaming Site"
-            />
-            <p>Educational Gaming Site</p>
-          </div>
-        </a>
-        <a
-          class="filter-item"
-          filter-categories="filter-css filter-html filter-js"
-          href="https://sherpadndabambi.github.io/rock-paper-scissors/"
-          target="_blank"
-        >
-          <div class="pagination-item project-card tilting-card">
-            <img
-              src="assets/img/rock-paper-scissors-og-image.jpg"
-              alt="Rock Paper Scissors"
-            />
-            <p>Rock Paper Scissors</p>
-          </div>
-        </a>
-        <a
-          class="filter-item"
-          filter-categories="filter-css filter-html filter-jquery filter-js"
-          href="https://sherpadndabambi.github.io/phone-number-generator/"
-          target="_blank"
-        >
-          <div class="pagination-item project-card tilting-card">
-            <img
-              src="assets/img/phone-number-generator-og-image.jpg"
-              alt="Phone Number Generator"
-            />
-            <p>Phone Number Generator</p>
-          </div>
-        </a>
-        <a
-          class="filter-item"
-          filter-categories="filter-css filter-html filter-js"
-          href="https://sherpadndabambi.github.io/diffchecker-clone/"
-          target="_blank"
-        >
-          <div class="pagination-item project-card tilting-card">
-            <img
-              src="assets/img/diffchecker-clone-og-image.jpg"
-              alt="Phone Number Generator"
-            />
-            <p>Diffchecker Clone</p>
-          </div>
-        </a>
-        <a
-          href="https://github.com/sherpadndabambi?tab=repositories"
-          target="_blank"
-        >
-          <div
-            class="pagination-item project-card tilting-card more-projects-card"
-          >
-            <img
-              src="./assets/img/Octicons-mark-github.svg"
-              alt="More projects"
-            />
-            <p>More projects</p>
-          </div>
-        </a>
+
+          <h3>Enterprise Collaboration & SharePoint</h3>
+
+          <p>
+            Designing structured SharePoint sites, document management
+            architecture, permission models, and Microsoft 365 collaboration
+            tools for team productivity.
+          </p>
+        </div>
+
+        <div class="microsoft-card tilting-card">
+          <div class="card-icon"><i class="fa-solid fa-robot"></i></div>
+
+          <h3>Workflow Automation</h3>
+
+          <p>
+            Building automated business workflows, notification triggers, and
+            data synchronizations utilizing Microsoft Power Automate and custom
+            service integrations.
+          </p>
+        </div>
+
+        <div class="microsoft-card tilting-card">
+          <div class="card-icon"><i class="fa-solid fa-network-wired"></i></div>
+
+          <h3>Hybrid & Cloud Solutions</h3>
+
+          <p>
+            Connecting web platforms with cloud infrastructure, secure backend
+            services, and scalable cloud databases for seamless business
+            integration.
+          </p>
+        </div>
       </div>
     </section>
+
+    <hr id="projects" />
+
+    <!-- Featured Project Section -->
+
+    <section class="projects">
+      <h2 class="section-title">Featured Project</h2>
+
+      <p class="section-subtitle">
+        Flagship production e-commerce platform showcasing full-stack and cloud
+        engineering
+      </p>
+
+      <div class="featured-project-container">
+        <div class="featured-project-card">
+          <div class="featured-header">
+            <h3 class="featured-title">Online Sneaker Shop</h3>
+
+            <span class="featured-badge">Production Architecture</span>
+          </div>
+
+          <p class="featured-description">
+            A production-oriented e-commerce platform built to demonstrate
+            full-stack engineering, distributed backend application
+            architecture, remote serverless database integration, object storage
+            management, and cloud deployment practices.
+          </p>
+
+          <div class="tech-tags">
+            <span class="tech-tag">React</span>
+
+            <span class="tech-tag">Node.js</span>
+
+            <span class="tech-tag">Express</span>
+
+            <span class="tech-tag">PostgreSQL (Neon)</span>
+
+            <span class="tech-tag">Object Storage</span>
+
+            <span class="tech-tag">Cloud Deployment</span>
+          </div>
+
+          <div class="project-meta">
+            <div class="repo-status">
+              <!-- <i class="fa-solid fa-lock"></i>
+
+              <span>Source code: Private repository</span> -->
+            </div>
+
+            <div class="project-links">
+              <a
+                href="https://sneakers.jindasoftconsulting.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="link-btn link-btn-primary"
+              >
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live
+                Application
+              </a>
+
+              <a
+                href="projects/online-sneaker-shop.html"
+                class="link-btn link-btn-secondary"
+              >
+                <i class="fa-solid fa-book-open"></i> Read Case Study
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="github-discovery-card">
+          <a
+            href="https://github.com/sherpadndabambi?tab=repositories"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="github-discovery-link"
+          >
+            <i class="fa-brands fa-github"></i>
+
+            <span>Explore all code repositories on GitHub</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
     <hr />
+
     <footer>
-      <p>&copy; Sherpad Ndabambi 2025</p>
+      <p>&copy; Sherpad Ndabambi 2026</p>
     </footer>
 
-    <a href="#"><i id="top-button" class="fa-solid fa-circle-up"></i></a>
+    <a href="#about" aria-label="Scroll to top"
+      ><i id="top-button" class="fa-solid fa-circle-up"></i
+    ></a>
 
-    <script src="./dist/filterbuttons.js"></script>
+    <script src="./dist/typewriter.js"></script>
+
     <script src="./dist/headerscrolleffect.js"></script>
+
     <script
       defer
       src="https://github.com/sherpadndabambi/tilting-card/releases/download/v1.0.0/tilting-card.js"
