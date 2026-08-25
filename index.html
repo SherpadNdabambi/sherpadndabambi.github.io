@@ -37,9 +37,19 @@
 
         </a>
 
-        <i class="fa-solid fa-bars"></i>
+        <button
+          id="hamburger-toggle"
+          class="hamburger-menu"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+        >
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
 
-        <ul>
+        <ul id="primary-navigation" class="nav-links">
           <li><a href="#about">About Me</a></li>
 
           <li><a href="#capabilities">Capabilities</a></li>
@@ -382,6 +392,8 @@
     <script src="./dist/typewriter.js"></script>
 
     <script src="./dist/headerscrolleffect.js"></script>
+
+    <script src="./dist/hamburgermenu.js"></script>
 
     <script
       defer
