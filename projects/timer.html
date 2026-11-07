@@ -1,0 +1,550 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Case Study: Timer - Sherpad Ndabambi</title>
+
+    <meta
+      name="description"
+      content="Engineering case study for Timer, a cloud-based cross-platform PWA built with React 18, TypeScript, IndexedDB (Dexie.js) local-first storage, Supabase, and Deno Edge Functions."
+    />
+
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+
+    <link rel="icon" type="image/png" href="../assets/img/favicon.png" />
+
+    <script
+      src="https://kit.fontawesome.com/709e25c218.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <a
+          href="../index.html"
+          style="display: flex; align-items: center; text-decoration: none"
+        >
+          <img src="../assets/img/favicon.png" alt="Logo" class="logo" />
+        </a>
+
+        <button
+          id="hamburger-toggle"
+          class="hamburger-menu"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+        >
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+
+        <ul id="primary-navigation" class="nav-links">
+          <li>
+            <a href="../index.html" class="back-link"
+              ><i class="fa-solid fa-arrow-left"></i> Portfolio</a
+            >
+          </li>
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#stack">Stack</a></li>
+          <li><a href="#architecture">Architecture</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#decisions">Key Decisions</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="case-study-header">
+      <h1 class="primary-text">Timer</h1>
+
+      <p class="section-subtitle" style="margin: 10px auto">
+        Engineering Case Study — Local-First Cross-Platform PWA, Edge Serverless
+        & Cloud Sync
+      </p>
+
+      <div style="margin-top: 15px">
+        <a
+          href="https://timer.jindasoftconsulting.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="link-btn link-btn-primary"
+        >
+          <i class="fa-solid fa-arrow-up-right-from-square"></i> Visit Live
+          Application
+        </a>
+      </div>
+    </div>
+
+    <main class="case-study-body">
+      <!-- 1. Overview -->
+      <section id="overview" class="case-study-section">
+        <h2>1. Overview</h2>
+
+        <p>
+          <strong>Timer</strong> is a modern, cloud-based cross-platform
+          Progressive Web App (PWA) engineered for high-precision time tracking,
+          productivity workflows (Pomodoro and Stopwatch), and comprehensive
+          multi-tenant team and workspace collaboration.
+        </p>
+
+        <p>
+          Unlike typical web timers that break the moment network connectivity
+          drops or lag under server round-trips, Timer is designed from the
+          ground up as a <strong>local-first application</strong>. It utilizes
+          client-side persistence via IndexedDB to ensure uninterrupted
+          timekeeping, paired with background cloud synchronization to Supabase,
+          serverless Edge Functions on Deno, and granular PostgreSQL Row-Level
+          Security (RLS).
+        </p>
+      </section>
+
+      <!-- 2. Technical Stack Breakdown -->
+      <section id="stack" class="case-study-section">
+        <h2>2. Technical Architecture & Stack</h2>
+
+        <p>
+          A surface-level repository scan might misjudge this as a simple static
+          site. In reality, Timer is powered by a sophisticated distributed
+          client-and-edge architecture designed for offline resilience, robust
+          security, and enterprise team operations.
+        </p>
+
+        <div class="tech-grid">
+          <div class="tech-card">
+            <h4><i class="fa-brands fa-react"></i> Core Frontend</h4>
+            <ul>
+              <li>
+                <strong>React 18:</strong> Component model and reactive state UI
+              </li>
+              <li>
+                <strong>TypeScript:</strong> End-to-end strict typing across
+                client and functions
+              </li>
+              <li>
+                <strong>Vite:</strong> Ultra-fast build pipeline & optimized
+                bundles
+              </li>
+              <li>
+                <strong>Vanilla CSS:</strong> Clean, responsive, dependency-free
+                styling
+              </li>
+              <li>
+                <strong>PWA Shell:</strong> Service worker caching &
+                cross-platform installability via <code>vite-plugin-pwa</code>
+              </li>
+            </ul>
+          </div>
+
+          <div class="tech-card">
+            <h4><i class="fa-solid fa-database"></i> Storage & Cloud</h4>
+            <ul>
+              <li>
+                <strong>Dexie.js & dexie-react-hooks:</strong> IndexedDB wrapper
+                powering offline-first data reactivity
+              </li>
+              <li>
+                <strong>Supabase JS:</strong> Client SDK for realtime data
+                subscriptions & auth
+              </li>
+              <li>
+                <strong>PostgreSQL:</strong> Relational schema
+                version-controlled across 23 Supabase SQL migrations
+              </li>
+              <li>
+                <strong>Row-Level Security (RLS):</strong> SQL-enforced tenant
+                and workspace access policies
+              </li>
+            </ul>
+          </div>
+
+          <div class="tech-card">
+            <h4><i class="fa-solid fa-server"></i> Serverless Edge & APIs</h4>
+            <ul>
+              <li>
+                <strong>13 Supabase Edge Functions:</strong> Deno & TypeScript
+                microservices for critical backend logic
+              </li>
+              <li>
+                <strong>WhatsApp Cloud API:</strong> Phone OTP delivery via
+                webhook integration
+              </li>
+              <li>
+                <strong>Google OAuth:</strong> Frictionless single sign-on
+                authentication
+              </li>
+              <li>
+                <strong>Team Invitations:</strong> Automated tokenized
+                email/link onboarding
+              </li>
+            </ul>
+          </div>
+
+          <div class="tech-card">
+            <h4><i class="fa-solid fa-flask-vial"></i> Testing & Quality</h4>
+            <ul>
+              <li>
+                <strong>Vitest:</strong> High-speed unit and integration test
+                runner
+              </li>
+              <li>
+                <strong>fake-indexeddb:</strong> In-memory IndexedDB
+                virtualization for testing storage interactions
+              </li>
+              <li>
+                <strong>Deterministic Mocking:</strong> Isolated backend service
+                and webhook simulation
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. Architecture Diagram -->
+      <section id="architecture" class="case-study-section">
+        <h2>3. System Architecture</h2>
+
+        <p>
+          The architecture cleanly decouples client-side local-first operations
+          from cloud coordination. Offline writes commit instantly to IndexedDB;
+          background sync synchronizes with Supabase PostgreSQL under strict
+          Row-Level Security policies. Sensitive workflows—such as WhatsApp OTP
+          dispatch and workspace invitations—execute via isolated Deno Edge
+          Functions.
+        </p>
+
+        <div class="arch-diagram-container">
+          <img
+            src="../assets/img/Timer System Architecture Diagram.svg"
+            alt="Timer System Architecture Diagram"
+          />
+        </div>
+      </section>
+
+      <!-- 4. Key Engineering Highlights -->
+      <section id="decisions" class="case-study-section">
+        <h2>4. Key Engineering Decisions</h2>
+
+        <div class="decision-block">
+          <h4>1. Local-First Timekeeping with Dexie.js (IndexedDB)</h4>
+          <p>
+            <strong>Problem:</strong> Network latency or intermittent drops can
+            lead to lost seconds, desynchronized timer states, or complete
+            failure to start or log time entries while on unstable connections.
+          </p>
+          <p>
+            <strong>Decision:</strong> Implemented a local-first persistence
+            layer using Dexie.js and <code>dexie-react-hooks</code> directly in
+            the browser.
+          </p>
+          <p>
+            <strong>Result:</strong> Timers tick accurately with zero network
+            lag. All state changes write instantly to IndexedDB and queue for
+            cloud synchronization as soon as connectivity is detected.
+          </p>
+        </div>
+
+        <div class="decision-block">
+          <h4>2. 13 Supabase Edge Functions on Deno</h4>
+          <p>
+            <strong>Problem:</strong> Certain core business operations—such as
+            WhatsApp OTP delivery, invitation token validation, and OAuth
+            handshakes—require server-side secret keys and cannot run safely in
+            the client browser.
+          </p>
+          <p>
+            <strong>Decision:</strong> Deployed 13 lightweight, globally
+            distributed Supabase Edge Functions written in TypeScript and
+            executed on the Deno runtime.
+          </p>
+          <p>
+            <strong>Result:</strong> Serverless efficiency with near-instant
+            cold starts, complete secret isolation from client bundles, and
+            seamless webhook integrations.
+          </p>
+        </div>
+
+        <div class="decision-block">
+          <h4>
+            3. Multi-Tenant Isolation with PostgreSQL Row-Level Security (RLS)
+          </h4>
+          <p>
+            <strong>Problem:</strong> Workspaces contain sensitive corporate
+            time logs, client details, personnel details, and department
+            structures that must be strictly isolated between team members and
+            different client organizations.
+          </p>
+          <p>
+            <strong>Decision:</strong> Crafted 23 detailed SQL migration files
+            establishing comprehensive Row-Level Security (RLS) policies
+            directly inside PostgreSQL.
+          </p>
+          <p>
+            <strong>Result:</strong> Data security is guaranteed at the database
+            engine level. Even direct client queries via Supabase JS cannot
+            bypass workspace tenancy or role boundary checks.
+          </p>
+        </div>
+
+        <div class="decision-block">
+          <h4>4. Phone OTP Delivery via WhatsApp Cloud Webhook</h4>
+          <p>
+            <strong>Problem:</strong> Standard SMS OTP delivery can be expensive
+            and unreliable internationally, particularly across emerging
+            markets.
+          </p>
+          <p>
+            <strong>Decision:</strong> Engineered an Edge Function webhook
+            integrating directly with the WhatsApp API to deliver one-time
+            passwords reliably to verified mobile devices.
+          </p>
+          <p>
+            <strong>Result:</strong> Cost-effective, high-deliverability
+            two-factor and phone-based authentication with instant receipt.
+          </p>
+        </div>
+      </section>
+
+      <!-- 5. Features Showcased -->
+      <section id="features" class="case-study-section">
+        <h2>5. Application Features & UI Walkthrough</h2>
+
+        <p>
+          Timer combines deep productivity utilities with comprehensive
+          organization-level workspace management:
+        </p>
+
+        <div class="features-gallery-grid">
+          <div class="feature-card">
+            <img
+              src="../assets/img/Timer Screenshots/Stopwatch.png"
+              alt="Stopwatch tracking interface"
+              loading="lazy"
+            />
+            <div class="feature-content">
+              <h4>Stopwatch Time Tracker</h4>
+              <p>
+                Real-time tracking with project tagging, instant play/pause
+                controls, and direct integration with local IndexedDB storage.
+              </p>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <img
+              src="../assets/img/Timer Screenshots/Pomodoro.png"
+              alt="Pomodoro timer interface"
+              loading="lazy"
+            />
+            <div class="feature-content">
+              <h4>Pomodoro Focus Timer</h4>
+              <p>
+                Customizable focus intervals, short breaks, and long breaks to
+                boost productivity, fully backed by audio cues and persistent
+                state.
+              </p>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <img
+              src="../assets/img/Timer Screenshots/Work History & Organization.png"
+              alt="Work history and time log organization"
+              loading="lazy"
+            />
+            <div class="feature-content">
+              <h4>Work History & Organization</h4>
+              <p>
+                Granular grouped logs displaying daily totals, associated
+                projects, departments, and client associations with inline
+                editing capabilities.
+              </p>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <img
+              src="../assets/img/Timer Screenshots/Reporting.png"
+              alt="Reporting analytics and metrics"
+              loading="lazy"
+            />
+            <div class="feature-content">
+              <h4>Reporting & Analytics</h4>
+              <p>
+                Visual session history analytics with daily time distribution bar charts,
+                metrics for maximum, minimum, and average daily time, and total hours worked.
+              </p>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <img
+              src="../assets/img/Timer Screenshots/Workspace Switching.png"
+              alt="Multi-tenant workspace switching"
+              loading="lazy"
+            />
+            <div class="feature-content">
+              <h4>Multi-Tenant Workspace Switching</h4>
+              <p>
+                Seamless context switching between personal spaces and corporate
+                workspaces with isolated settings, roles, and time entries.
+              </p>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <img
+              src="../assets/img/Timer Screenshots/Member Invitation, Management & Collaboration.png"
+              alt="Member invitation and team collaboration"
+              loading="lazy"
+            />
+            <div class="feature-content">
+              <h4>Member Invitation & Roles</h4>
+              <p>
+                Invite collaborators via email links with granular role-based
+                access control (Admin, Member) orchestrated by Deno Edge
+                Functions.
+              </p>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <img
+              src="../assets/img/Timer Screenshots/Project Management.png"
+              alt="Project management dashboard"
+              loading="lazy"
+            />
+            <div class="feature-content">
+              <h4>Project Management</h4>
+              <p>
+                Organize work into structured projects and track individual
+                progress.
+              </p>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <img
+              src="../assets/img/Timer Screenshots/Client Management.png"
+              alt="Client management overview"
+              loading="lazy"
+            />
+            <div class="feature-content">
+              <h4>Client Management</h4>
+              <p>
+                Maintain external client and customer accounts to organize, filter,
+                and associate projects and tasks across workspaces.
+              </p>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <img
+              src="../assets/img/Timer Screenshots/Department Management.png"
+              alt="Department management view"
+              loading="lazy"
+            />
+            <div class="feature-content">
+              <h4>Department Management</h4>
+              <p>
+                Structure organization members into functional departments for
+                streamlined team monitoring and resource management.
+              </p>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <img
+              src="../assets/img/Timer Screenshots/Security Preferences.png"
+              alt="Security and authentication preferences"
+              loading="lazy"
+            />
+            <div class="feature-content">
+              <h4>Security & Authentication</h4>
+              <p>
+                Multi-factor authentication (MFA), WhatsApp OTP phone
+                verification, and credential management.
+              </p>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <img
+              src="../assets/img/Timer Screenshots/Settings.png"
+              alt="Application settings"
+              loading="lazy"
+            />
+            <div class="feature-content">
+              <h4>Settings & Configuration</h4>
+              <p>
+                Fine-tune timer settings including sound notifications, interval
+                and break lengths, and session state reminders.
+              </p>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <img
+              src="../assets/img/Timer Screenshots/Profile Customization.png"
+              alt="User profile customization"
+              loading="lazy"
+            />
+            <div class="feature-content">
+              <h4>Profile Customization</h4>
+              <p>
+                Manage personal profile details, avatars, connected identity
+                providers, and regional timezone preferences.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. Production Deployment & PWA -->
+      <section class="case-study-section">
+        <h2>6. Production Deployment & PWA Capability</h2>
+
+        <p>
+          Timer is fully deployed and accessible live under a custom domain:
+        </p>
+
+        <p style="text-align: center; margin: 20px 0">
+          <a
+            href="https://timer.jindasoftconsulting.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            style="font-weight: bold; font-size: 1.1rem; color: var(--primary)"
+          >
+            https://timer.jindasoftconsulting.com
+          </a>
+        </p>
+
+        <p>
+          Configured as an installable
+          <strong>Progressive Web App (PWA)</strong>, Timer provides desktop and
+          mobile users with a standalone native-app experience, complete with
+          offline service worker caching, instant launch speeds, and background
+          synchronization.
+        </p>
+      </section>
+    </main>
+
+    <footer style="margin-top: 40px">
+      <p>
+        &copy; Sherpad Ndabambi 2026 —
+        <a
+          href="../index.html"
+          style="color: var(--primary); text-decoration: none"
+          >Back to Portfolio Home</a
+        >
+      </p>
+    </footer>
+
+    <script src="../dist/hamburgermenu.js"></script>
+  </body>
+</html>

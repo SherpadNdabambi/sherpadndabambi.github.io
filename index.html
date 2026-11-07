@@ -32,9 +32,7 @@
     <header>
       <nav>
         <a href="#">
-
           <img src="assets/img/favicon.png" alt="Logo" class="logo" />
-
         </a>
 
         <button
@@ -307,18 +305,81 @@
 
     <hr id="projects" />
 
-    <!-- Featured Project Section -->
+    <!-- Featured Projects Section -->
 
     <section class="projects">
-      <h2 class="section-title">Featured Project</h2>
+      <h2 class="section-title">Featured Projects</h2>
 
       <p class="section-subtitle">
-        Flagship production e-commerce platform showcasing full-stack and cloud
-        engineering
+        Production-grade web applications showcasing modern full-stack, cloud,
+        and edge engineering
       </p>
 
       <div class="featured-project-container">
+        <!-- Project 1: Timer -->
         <div class="featured-project-card">
+          <div class="featured-header">
+            <h3 class="featured-title">Timer</h3>
+
+            <span class="featured-badge">Cloud PWA & Local-First</span>
+          </div>
+
+          <p class="featured-description">
+            A cloud-based cross-platform Progressive Web App (PWA) built for
+            high-precision timekeeping, Pomodoro focus flows, and multi-tenant
+            workspace collaboration. Engineered with a local-first architecture
+            using IndexedDB (Dexie.js) for instantaneous zero-latency operations
+            and offline resilience, paired with 13 Supabase Deno Edge Functions,
+            PostgreSQL with 23 migrations under strict Row-Level Security (RLS),
+            Google OAuth 2.0, and WhatsApp OTP authentication.
+          </p>
+
+          <div class="tech-tags">
+            <span class="tech-tag">React 18</span>
+
+            <span class="tech-tag">TypeScript</span>
+
+            <span class="tech-tag">IndexedDB (Dexie.js)</span>
+
+            <span class="tech-tag">Supabase Edge Functions (Deno)</span>
+
+            <span class="tech-tag">PostgreSQL & RLS</span>
+
+            <span class="tech-tag">PWA</span>
+
+            <span class="tech-tag">WhatsApp API</span>
+
+            <span class="tech-tag">Google OAuth</span>
+
+            <span class="tech-tag">Vitest</span>
+          </div>
+
+          <div class="project-meta">
+            <div class="repo-status">
+              <!-- <i class="fa-solid fa-lock"></i>
+              <span>Source code: Private repository</span> -->
+            </div>
+
+            <div class="project-links">
+              <a
+                href="https://timer.jindasoftconsulting.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="link-btn link-btn-primary"
+              >
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live
+                Application
+              </a>
+
+              <a href="projects/timer.html" class="link-btn link-btn-secondary">
+                <i class="fa-solid fa-book-open"></i> Read Case Study
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: Online Sneaker Shop -->
+        <div class="featured-project-card" style="margin-top: 35px">
           <div class="featured-header">
             <h3 class="featured-title">Online Sneaker Shop</h3>
 
